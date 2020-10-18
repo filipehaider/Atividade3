@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         {Resultado.VITORIA, Resultado.DERROTA, Resultado.VITORIA, Resultado.DERROTA, Resultado.EMPATE},
 
     };
-
+        //
 
 
     private Integer pontosCPU = 0;
