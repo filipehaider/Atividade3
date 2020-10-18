@@ -102,10 +102,14 @@ public class MainActivity extends AppCompatActivity {
                 pontosCPU += 3;
                 break;
         }
-
-
+        atualizaStatus();
     }
 
+    private void atualizaStatus(){
+     progressBarCPU.setProgress(pontosCPU);
+     progressBarHumano.setProgress(pontosHumano);
+
+    }
 
 }
 
