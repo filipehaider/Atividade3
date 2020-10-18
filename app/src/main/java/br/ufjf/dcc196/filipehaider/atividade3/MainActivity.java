@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     public enum Jogada{
         PEDRA(0), PAPEL(1), TESOURA(2), LAGARTO(3), SPOCK(4);
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBarHumano;
     private TextView textViewStatus;
 
+    private Random dado = new Random();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void rodada(Jogada jogada){
+        Jogada jogadaComputador = jogada.values()[dado.nextInt(5)];
 
 
     }
