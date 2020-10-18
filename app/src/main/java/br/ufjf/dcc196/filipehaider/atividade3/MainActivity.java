@@ -89,7 +89,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void rodada(Jogada jogada){
-        Jogada jogadaComputador = jogada.values()[dado.nextInt(5)];
+        Jogada jogadaCPU = jogada.values()[dado.nextInt(5)];
+        switch (TABELA[jogada.valor][jogadaCPU.valor]){
+            case VITORIA:
+                pontosHumano += 3;
+                break;
+            case EMPATE:
+                pontosCPU += 1;
+                pontosHumano += 1;
+                break;
+            case DERROTA:
+                pontosCPU += 3;
+                break;
+        }
 
 
     }
